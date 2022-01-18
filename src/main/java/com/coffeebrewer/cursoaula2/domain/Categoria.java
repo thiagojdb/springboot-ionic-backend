@@ -1,6 +1,5 @@
 package com.coffeebrewer.cursoaula2.domain;
 
-
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import javax.persistence.*;

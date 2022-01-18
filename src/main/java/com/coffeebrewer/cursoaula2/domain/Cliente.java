@@ -1,13 +1,16 @@
 package com.coffeebrewer.cursoaula2.domain;
 
 import com.coffeebrewer.cursoaula2.domain.enums.TipoCliente;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.*;
+
 @Entity
 public class Cliente implements Serializable {
     private static final long serialVersionUID = 1L;
+
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY )
     private Integer id;
@@ -16,12 +19,14 @@ public class Cliente implements Serializable {
     private String cpfOuCnpj;
     private Integer tipo;
 
-    @OneToMany(mappedBy = "cliente")
-    private List<Endereco> enderecos = new ArrayList<>();
-
     @ElementCollection
     @CollectionTable(name = "telefone")
     private Set<String> telefones  = new HashSet<>();
+
+
+    @JsonManagedReference
+    @OneToMany(mappedBy = "cliente")
+    private List<Endereco> enderecos = new ArrayList<>();
 
     public Cliente() {
     }

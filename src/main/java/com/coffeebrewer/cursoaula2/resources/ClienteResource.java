@@ -1,7 +1,8 @@
 package com.coffeebrewer.cursoaula2.resources;
 
-import com.coffeebrewer.cursoaula2.domain.Categoria;
-import com.coffeebrewer.cursoaula2.services.CategoriaService;
+
+import com.coffeebrewer.cursoaula2.domain.Cliente;
+import com.coffeebrewer.cursoaula2.services.ClienteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -9,18 +10,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import static org.springframework.web.bind.annotation.RequestMethod.GET;
-
 @RestController
-@RequestMapping(value = "/categorias")
-public class CategoriaResource {
+@RequestMapping(value = "/clientes")
+public class ClienteResource {
 
     @Autowired
-    public CategoriaService service;
+    public ClienteService service;
 
-    @RequestMapping(value = "{id}", method= RequestMethod.GET)
+    @RequestMapping(value = "{id}", method = RequestMethod.GET)
     public ResponseEntity<?> listar(@PathVariable Integer id){
-            Categoria obj = service.buscar(id);
-            return ResponseEntity.ok().body(obj);
+        Cliente obj = service.buscar(id);
+        return ResponseEntity.ok().body(obj);
     }
+
+
 }

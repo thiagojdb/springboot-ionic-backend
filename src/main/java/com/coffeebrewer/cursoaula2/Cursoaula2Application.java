@@ -7,12 +7,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Arrays;
 
-import static org.springframework.web.bind.annotation.RequestMethod.GET;
 
 @SpringBootApplication
 @RestController
@@ -86,6 +84,8 @@ public class Cursoaula2Application implements CommandLineRunner {
 
         clienteRepository.saveAll(Arrays.asList(cli1));
         enderecoRepository.saveAll(Arrays.asList(e1,e2));
+
+
 
     }
 
