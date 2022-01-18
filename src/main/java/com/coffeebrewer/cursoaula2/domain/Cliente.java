@@ -1,6 +1,7 @@
 package com.coffeebrewer.cursoaula2.domain;
 
 import com.coffeebrewer.cursoaula2.domain.enums.TipoCliente;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import javax.persistence.*;
@@ -29,6 +30,7 @@ public class Cliente implements Serializable {
     private List<Endereco> enderecos = new ArrayList<>();
 
     @OneToMany(mappedBy = "cliente")
+    @JsonBackReference
     private List<Pedido> pedidos = new ArrayList<>();
 
     public Cliente() {
@@ -82,14 +84,6 @@ public class Cliente implements Serializable {
         this.tipo = tipo.getCod();
     }
 
-    public List<Endereco> getEndeceros() {
-        return enderecos;
-    }
-
-    public void setEndeceros(List<Endereco> endeceros) {
-        this.enderecos = endeceros;
-    }
-
     public Set<String> getTelefones() {
         return telefones;
     }
@@ -104,6 +98,14 @@ public class Cliente implements Serializable {
 
     public void setPedidos(List<Pedido> pedidos) {
         this.pedidos = pedidos;
+    }
+
+    public List<Endereco> getEnderecos() {
+        return enderecos;
+    }
+
+    public void setEnderecos(List<Endereco> enderecos) {
+        this.enderecos = enderecos;
     }
 
     @Override
