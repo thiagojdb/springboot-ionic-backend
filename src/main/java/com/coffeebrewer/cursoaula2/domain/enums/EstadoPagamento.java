@@ -1,9 +1,9 @@
 package com.coffeebrewer.cursoaula2.domain.enums;
 
 public enum EstadoPagamento {
-    PENDENTE(0, "Pagamento Pendente "),
-    QUITADO(1, "Pagamento Quitado"),
-    CANCELADO(2, "Pagamento Cancelado");
+    PENDENTE(1, "Pagamento Pendente "),
+    QUITADO(2, "Pagamento Quitado"),
+    CANCELADO(3, "Pagamento Cancelado");
 
     private Integer cod;
     private String desc;
