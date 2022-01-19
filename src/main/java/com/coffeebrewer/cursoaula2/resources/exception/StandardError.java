@@ -1,6 +1,7 @@
 package com.coffeebrewer.cursoaula2.resources.exception;
 
 import java.io.Serializable;
+import java.text.SimpleDateFormat;
 
 public class StandardError implements Serializable {
     private static final long serialVersionUID = 1L;
