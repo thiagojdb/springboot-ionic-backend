@@ -1,6 +1,7 @@
 package com.coffeebrewer.cursoaula2.services;
 
 import com.coffeebrewer.cursoaula2.domain.Categoria;
+import com.coffeebrewer.cursoaula2.dto.CategoriaDTO;
 import com.coffeebrewer.cursoaula2.repositories.CategoriaRepository;
 import com.coffeebrewer.cursoaula2.services.exceptions.DataIntegrityException;
 import com.coffeebrewer.cursoaula2.services.exceptions.ObjectNotFoundException;
@@ -55,5 +56,9 @@ public class CategoriaService {
     public Page<Categoria> findPage(Integer page, Integer linesPerPage, String orderBy, String direction){
         PageRequest pageRequest = PageRequest.of(page, linesPerPage, Sort.Direction.valueOf(direction), orderBy);
         return repo.findAll(pageRequest);
+    }
+
+    public Categoria fromDTO(CategoriaDTO objDTO){
+        return new Categoria(objDTO.getId(), objDTO.getNome());
     }
 }
