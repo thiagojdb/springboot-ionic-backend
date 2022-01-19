@@ -1,6 +1,7 @@
 package com.coffeebrewer.cursoaula2.services;
 
 import com.coffeebrewer.cursoaula2.domain.Categoria;
+import com.coffeebrewer.cursoaula2.domain.Cliente;
 import com.coffeebrewer.cursoaula2.dto.CategoriaDTO;
 import com.coffeebrewer.cursoaula2.repositories.CategoriaRepository;
 import com.coffeebrewer.cursoaula2.services.exceptions.DataIntegrityException;
@@ -35,8 +36,9 @@ public class CategoriaService {
     }
 
     public Categoria update(Categoria obj) {
-        find(obj.getId());
-        return repo.save(obj);
+        Categoria newObj = find(obj.getId());
+        updateData(newObj, obj);
+        return repo.save(newObj);
     }
 
     public void delete(Integer id) {
@@ -60,5 +62,9 @@ public class CategoriaService {
 
     public Categoria fromDTO(CategoriaDTO objDTO){
         return new Categoria(objDTO.getId(), objDTO.getNome());
+    }
+
+    private void updateData(Categoria newObj, Categoria obj){
+        newObj.setNome(obj.getNome());
     }
 }
