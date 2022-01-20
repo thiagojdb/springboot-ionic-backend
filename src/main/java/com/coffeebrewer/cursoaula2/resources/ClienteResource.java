@@ -3,6 +3,7 @@ package com.coffeebrewer.cursoaula2.resources;
 
 import com.coffeebrewer.cursoaula2.domain.Cliente;
 import com.coffeebrewer.cursoaula2.dto.ClienteDTO;
+import com.coffeebrewer.cursoaula2.dto.ClienteNewDTO;
 import com.coffeebrewer.cursoaula2.services.ClienteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -28,7 +29,7 @@ public class ClienteResource {
     }
 
     @RequestMapping(method = RequestMethod.POST)
-    public ResponseEntity<Void> insert(@Valid @RequestBody ClienteDTO objDTO) {
+    public ResponseEntity<Void> insert(@Valid @RequestBody ClienteNewDTO objDTO) {
         Cliente obj = service.fromDTO(objDTO);
         obj = service.insert(obj);
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest().
