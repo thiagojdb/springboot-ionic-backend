@@ -1,6 +1,5 @@
 package com.coffeebrewer.cursoaula2.domain;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
@@ -8,7 +7,7 @@ import java.io.Serializable;
 import java.util.*;
 
 @Entity
-public class Produto implements Serializable {
+public class Product implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,17 +17,17 @@ public class Produto implements Serializable {
 
     @JsonIgnore
     @ManyToMany
-    @JoinTable(name ="produto_categoria", joinColumns = @JoinColumn(name= "produto_id"), inverseJoinColumns = @JoinColumn(name = "categoria_id"))
+    @JoinTable(name ="product_categoria", joinColumns = @JoinColumn(name= "product_id"), inverseJoinColumns = @JoinColumn(name = "categoria_id"))
     private List<Categoria> categorias = new ArrayList<>();
 
     @JsonIgnore
-    @OneToMany(mappedBy = "id.produto")
+    @OneToMany(mappedBy = "id.product")
     private Set<ItemPedido> itens = new HashSet<>();
 
-    public Produto() {
+    public Product() {
     }
 
-    public Produto(Integer id, String nome, Double preco) {
+    public Product(Integer id, String nome, Double preco) {
         this.id = id;
         this.nome = nome;
         this.preco = preco;
@@ -87,8 +86,8 @@ public class Produto implements Serializable {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Produto produto = (Produto) o;
-        return Objects.equals(id, produto.id);
+        Product product = (Product) o;
+        return Objects.equals(id, product.id);
     }
 
     @Override

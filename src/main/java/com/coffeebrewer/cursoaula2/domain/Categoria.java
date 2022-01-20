@@ -1,7 +1,5 @@
 package com.coffeebrewer.cursoaula2.domain;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
-
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -18,7 +16,7 @@ public class Categoria implements Serializable {
     private String nome;
 
     @ManyToMany(mappedBy = "categorias")
-    private List<Produto> produtos = new ArrayList<>();
+    private List<Product> products = new ArrayList<>();
 
     public Categoria() {
     }
@@ -45,12 +43,12 @@ public class Categoria implements Serializable {
         this.nome = nome;
     }
 
-    public List<Produto> getProdutos() {
-        return produtos;
+    public List<Product> getProducts() {
+        return products;
     }
 
-    public void setProdutos(List<Produto> produtos) {
-        this.produtos = produtos;
+    public void setProducts(List<Product> products) {
+        this.products = products;
     }
 
     @Override

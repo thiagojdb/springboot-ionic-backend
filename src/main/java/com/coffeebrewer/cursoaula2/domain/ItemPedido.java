@@ -2,7 +2,6 @@ package com.coffeebrewer.cursoaula2.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-import javax.persistence.Embeddable;
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import java.io.Serializable;
@@ -23,9 +22,9 @@ public class ItemPedido implements Serializable {
     public ItemPedido() {
     }
 
-    public ItemPedido(Pedido pedido, Produto produto, Double desconto, Integer quantidade, Double preco) {
+    public ItemPedido(Pedido pedido, Product product, Double desconto, Integer quantidade, Double preco) {
         super();
-        id.setProduto(produto);
+        id.setProduct(product);
         id.setPedido(pedido);
         this.desconto = desconto;
         this.quantidade = quantidade;
@@ -36,8 +35,8 @@ public class ItemPedido implements Serializable {
         return id.getPedido();
     }
 
-    public Produto getProduto(){
-        return id.getProduto();
+    public Product getProduct(){
+        return id.getProduct();
     }
 
     public ItemPedidoPK getId() {
