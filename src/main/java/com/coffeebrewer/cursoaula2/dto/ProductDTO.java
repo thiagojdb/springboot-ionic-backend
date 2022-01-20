@@ -1,7 +1,6 @@
 package com.coffeebrewer.cursoaula2.dto;
 
 import com.coffeebrewer.cursoaula2.domain.Product;
-
 import java.io.Serializable;
 
 public class ProductDTO implements Serializable {

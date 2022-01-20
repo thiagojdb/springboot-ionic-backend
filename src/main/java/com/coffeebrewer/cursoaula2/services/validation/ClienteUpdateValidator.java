@@ -1,22 +1,17 @@
 package com.coffeebrewer.cursoaula2.services.validation;
 
 import com.coffeebrewer.cursoaula2.domain.Cliente;
-import com.coffeebrewer.cursoaula2.domain.enums.TipoCliente;
 import com.coffeebrewer.cursoaula2.dto.ClienteDTO;
-import com.coffeebrewer.cursoaula2.dto.ClienteNewDTO;
 import com.coffeebrewer.cursoaula2.repositories.ClienteRepository;
 import com.coffeebrewer.cursoaula2.resources.exception.FieldMessage;
-import com.coffeebrewer.cursoaula2.services.validation.utils.BR;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.servlet.HandlerMapping;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-
 
 public class ClienteUpdateValidator implements ConstraintValidator<ClienteUpdate, ClienteDTO> {
 

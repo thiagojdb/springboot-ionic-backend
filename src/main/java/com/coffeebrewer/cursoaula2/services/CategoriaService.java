@@ -1,7 +1,6 @@
 package com.coffeebrewer.cursoaula2.services;
 
 import com.coffeebrewer.cursoaula2.domain.Categoria;
-import com.coffeebrewer.cursoaula2.domain.Cliente;
 import com.coffeebrewer.cursoaula2.dto.CategoriaDTO;
 import com.coffeebrewer.cursoaula2.repositories.CategoriaRepository;
 import com.coffeebrewer.cursoaula2.services.exceptions.DataIntegrityException;
@@ -12,7 +11,6 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.Optional;
 

@@ -1,6 +1,5 @@
 package com.coffeebrewer.cursoaula2.resources;
 
-
 import com.coffeebrewer.cursoaula2.domain.Cliente;
 import com.coffeebrewer.cursoaula2.dto.ClienteDTO;
 import com.coffeebrewer.cursoaula2.dto.ClienteNewDTO;

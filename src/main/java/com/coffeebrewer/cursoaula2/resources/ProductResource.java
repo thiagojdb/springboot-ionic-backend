@@ -1,17 +1,13 @@
 package com.coffeebrewer.cursoaula2.resources;
 
 import com.coffeebrewer.cursoaula2.domain.Product;
-import com.coffeebrewer.cursoaula2.domain.Pedido;
-import com.coffeebrewer.cursoaula2.domain.Product;
 import com.coffeebrewer.cursoaula2.dto.ProductDTO;
 import com.coffeebrewer.cursoaula2.resources.utils.URL;
-import com.coffeebrewer.cursoaula2.services.PedidoService;
 import com.coffeebrewer.cursoaula2.services.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController

@@ -6,7 +6,6 @@ import com.coffeebrewer.cursoaula2.domain.Endereco;
 import com.coffeebrewer.cursoaula2.domain.enums.TipoCliente;
 import com.coffeebrewer.cursoaula2.dto.ClienteDTO;
 import com.coffeebrewer.cursoaula2.dto.ClienteNewDTO;
-import com.coffeebrewer.cursoaula2.repositories.CidadeRepository;
 import com.coffeebrewer.cursoaula2.repositories.ClienteRepository;
 import com.coffeebrewer.cursoaula2.repositories.EnderecoRepository;
 import com.coffeebrewer.cursoaula2.services.exceptions.DataIntegrityException;
@@ -17,7 +16,6 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
-
 import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Optional;

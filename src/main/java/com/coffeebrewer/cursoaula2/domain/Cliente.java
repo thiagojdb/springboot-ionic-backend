@@ -2,7 +2,6 @@ package com.coffeebrewer.cursoaula2.domain;
 
 import com.coffeebrewer.cursoaula2.domain.enums.TipoCliente;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.*;

@@ -1,7 +1,6 @@
 package com.coffeebrewer.cursoaula2.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import java.io.Serializable;

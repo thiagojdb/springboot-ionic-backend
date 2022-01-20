@@ -7,12 +7,10 @@ import com.coffeebrewer.cursoaula2.repositories.ClienteRepository;
 import com.coffeebrewer.cursoaula2.resources.exception.FieldMessage;
 import com.coffeebrewer.cursoaula2.services.validation.utils.BR;
 import org.springframework.beans.factory.annotation.Autowired;
-
 import java.util.ArrayList;
 import java.util.List;
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
-
 
 public class ClienteInsertValidator implements ConstraintValidator<ClienteInsert, ClienteNewDTO> {
 

@@ -1,7 +1,6 @@
 package com.coffeebrewer.cursoaula2.domain;
 
 import com.coffeebrewer.cursoaula2.domain.enums.EstadoPagamento;
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
