@@ -2,11 +2,13 @@ package com.coffeebrewer.cursoaula2.dto;
 
 import com.coffeebrewer.cursoaula2.domain.Cliente;
 import com.coffeebrewer.cursoaula2.resources.ClienteResource;
+import com.coffeebrewer.cursoaula2.services.validation.ClienteInsert;
 import org.hibernate.validator.constraints.Length;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 import java.io.Serializable;
+
 
 public class ClienteDTO implements Serializable {
     private static final long serialVersionUID = 1L;
